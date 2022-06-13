@@ -15,9 +15,7 @@ use App\Http\Controllers\BlogController;
 */
 
 
-Route::get('/', function (){
-    return "hola";
-});
+Route::get('/', HomeController::class);
 
 Route::get('blog', [BlogController::class, "index"]);
 
