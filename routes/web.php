@@ -40,3 +40,7 @@ quedaria de esta manera
         ->namespace($this->namespace)
         ->group(base_path('routes/web.php'));
 */
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
