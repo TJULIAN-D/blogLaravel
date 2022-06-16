@@ -14,14 +14,15 @@ return new class extends Migration {
     {
         Schema::create('categories_posts', function (Blueprint $table) {
             $table->id();
-
-            $table->foreignId('id')
-                ->constrained('categories')
+            $table->foreignId('category_id')
+                ->references('id')
+                ->on('categories')
                 ->cascadeOnUpdate()
                 ->restrictOnDelete();
 
-            $table->foreignId('id')
-                ->constrained('posts')
+            $table->foreignId('post_id')
+                ->references('id')
+                ->on('posts')
                 ->cascadeOnUpdate()
                 ->restrictOnDelete();
 

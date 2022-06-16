@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('title');
             $table->string('slug')->unique();
             $table->text('description');
-            $table->text('description');
             $table->string('meta_title');
             $table->set('status', ['active','inactive',]);
             $table->timestamps();

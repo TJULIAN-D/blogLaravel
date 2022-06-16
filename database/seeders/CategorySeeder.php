@@ -2,32 +2,20 @@
 
 namespace Database\Seeders;
 
+use App\Models\Category;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class CategorySeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Run the database seeds.
      *
      * @return void
      */
     public function run()
     {
-
-        $this->call(CategorySeeder::class);
-        // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
-
-        /*
-         * Esta es la foma de hacer los seed se crea una instancia del modelo y a su se crea los valores
-         *  de cada columna
-         * */
-
+        //
         /*
         $category = new Category();
         $category->title = "blog-2";
@@ -39,6 +27,6 @@ class DatabaseSeeder extends Seeder
 
         $category->save();
         */
-
+        Category::factory(20)->create();
     }
 }
